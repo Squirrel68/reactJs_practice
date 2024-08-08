@@ -11,3 +11,9 @@ yarn add react-router-dom
 ```
 
 #### Step 2: Set up the Router in main.tsx
+
+## 3. Code UI for Register Layout
+
+## 4. Code UI for Register, Login Pages
+
+## 5. Validate Register Form with React Hook Form
