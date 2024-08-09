@@ -25,3 +25,7 @@ yarn add react-router-dom
 ## 8. Create Input component
 
 ## 9. Schema Validation with Yup
+
+## 10. Config setup Axios and React Query
+
+[TanStack Query Document](https://tanstack.com/query/latest/docs/framework/react/installation)
