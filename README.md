@@ -31,3 +31,5 @@ yarn add react-router-dom
 [TanStack Query Document](https://tanstack.com/query/latest/docs/framework/react/installation)
 
 ## 11. Call Register API
+
+## 12. Handle 422 Error from API
