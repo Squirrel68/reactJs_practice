@@ -7,7 +7,7 @@ import { registerAccount } from 'src/apis/auth.api'
 
 import Input from 'src/components/Input'
 import { ResponseApi } from 'src/types/utils.type'
-import { getRules, schema, type Schema } from 'src/utils/rules'
+import { schema, type Schema } from 'src/utils/rules'
 import { isAxiosUnprocessableEntityError } from 'src/utils/utils'
 
 type FormData = Schema
