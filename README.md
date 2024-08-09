@@ -21,3 +21,5 @@ yarn add react-router-dom
 ## 6. Validate Confirm Password for Register Form
 
 ## 7. Custom class .container tailwind
+
+## 8. Create Input component
