@@ -19,6 +19,7 @@ export default function Login() {
               <div className='text-2xl'>Đăng nhập</div>
               <div className='mt-8'>
                 <input
+                  autoComplete='on'
                   type='email'
                   name='email'
                   className='p-3 w-full outline-none border border-gray-300 focus:border-gray-500 rounded-sm focus:shadow-sm'
@@ -29,6 +30,7 @@ export default function Login() {
 
               <div className='mt3'>
                 <input
+                  autoComplete='on'
                   type='password'
                   name='password'
                   className='p-3 w-full outline-none border border-gray-300 focus:border-gray-500 rounded-sm focus:shadow-sm'

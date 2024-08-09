@@ -1,6 +1,6 @@
-import { RegisterOptions, useForm } from 'react-hook-form'
+import { RegisterOptions, useForm, useWatch } from 'react-hook-form'
 import { Link } from 'react-router-dom'
-import { rules } from 'src/utils/rules'
+import { getRules } from 'src/utils/rules'
 
 interface FormData {
   email: string
@@ -12,17 +12,24 @@ export default function Register() {
   const {
     register,
     handleSubmit,
+    watch,
+    getValues,
     formState: { errors }
   } = useForm<FormData>()
+  const rules = getRules(getValues)
 
   const onSubmit = handleSubmit(
     (data) => {
-      console.log(data)
+      // console.log(data)
     },
-    (errors) => {
-      console.log(errors)
+    (data) => {
+      const password = getValues('password')
+      console.log(password)
     }
   )
+
+  const formValues = watch('email')
+  console.log(formValues)
 
   return (
     <div className='bg-orange'>
@@ -33,6 +40,7 @@ export default function Register() {
               <div className='text-2xl'>Đăng ký</div>
               <div className='mt-8'>
                 <input
+                  autoComplete='on'
                   type='email'
                   className='p-3 w-full outline-none border border-gray-300 focus:border-gray-500 rounded-sm focus:shadow-sm'
                   placeholder='Email'
@@ -43,6 +51,7 @@ export default function Register() {
 
               <div className='mt-2'>
                 <input
+                  autoComplete='on'
                   type='password'
                   className='p-3 w-full outline-none border border-gray-300 focus:border-gray-500 rounded-sm focus:shadow-sm'
                   placeholder='Password'
@@ -53,6 +62,7 @@ export default function Register() {
 
               <div className='mt-2'>
                 <input
+                  autoComplete='on'
                   type='password'
                   className='p-3 w-full outline-none border border-gray-300 focus:border-gray-500 rounded-sm focus:shadow-sm'
                   placeholder='Confirm Password'

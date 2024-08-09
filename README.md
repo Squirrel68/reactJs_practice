@@ -17,3 +17,5 @@ yarn add react-router-dom
 ## 4. Code UI for Register, Login Pages
 
 ## 5. Validate Register Form with React Hook Form
+
+## 6. Validate Confirm Password for Register Form
