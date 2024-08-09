@@ -29,3 +29,5 @@ yarn add react-router-dom
 ## 10. Config setup Axios and React Query
 
 [TanStack Query Document](https://tanstack.com/query/latest/docs/framework/react/installation)
+
+## 11. Call Register API
