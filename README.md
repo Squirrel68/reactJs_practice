@@ -33,3 +33,5 @@ yarn add react-router-dom
 ## 11. Call Register API
 
 ## 12. Handle 422 Error from API
+
+## 13. Handle message error with axios interceptors and toastify
