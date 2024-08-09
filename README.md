@@ -23,3 +23,5 @@ yarn add react-router-dom
 ## 7. Custom class .container tailwind
 
 ## 8. Create Input component
+
+## 9. Schema Validation with Yup

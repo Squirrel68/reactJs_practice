@@ -1,13 +1,11 @@
-import { RegisterOptions, useForm, useWatch } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
+import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
-import Input from 'src/components/Input'
-import { getRules } from 'src/utils/rules'
 
-interface FormData {
-  email: string
-  password: string
-  confirm_password: string
-}
+import Input from 'src/components/Input'
+import { getRules, schema, type Schema } from 'src/utils/rules'
+
+type FormData = Schema
 
 export default function Register() {
   const {
@@ -16,12 +14,13 @@ export default function Register() {
     watch,
     getValues,
     formState: { errors }
-  } = useForm<FormData>()
-  const rules = getRules(getValues)
+  } = useForm<FormData>({
+    resolver: yupResolver(schema)
+  })
 
   const onSubmit = handleSubmit(
     (data) => {
-      // console.log(data)
+      console.log(data)
     },
     (data) => {
       const password = getValues('password')
@@ -46,7 +45,7 @@ export default function Register() {
                 className='mt-8'
                 errorMessage={errors.email?.message}
                 placeholder='Email'
-                rules={rules.email}
+                // rules={rules.email}
               ></Input>
               <Input
                 name='password'
@@ -55,7 +54,7 @@ export default function Register() {
                 className='mt-2'
                 errorMessage={errors.password?.message}
                 placeholder='Password'
-                rules={rules.password}
+                // rules={rules.password}
               ></Input>
               <Input
                 name='confirm_password'
@@ -64,7 +63,7 @@ export default function Register() {
                 className='mt-2'
                 errorMessage={errors.confirm_password?.message}
                 placeholder='Confirm Password'
-                rules={rules.confirm_password}
+                // rules={rules.confirm_password}
               ></Input>
 
               <div className='mt-2'>
